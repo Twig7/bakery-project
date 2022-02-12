@@ -9,7 +9,18 @@ namespace BakeryFun
   {
     public int BreadOrder { get; set;}
 
-    public Bread(int order);
+    public Bread(int order)
+    {
+      BreadOrder = order;
+    }
+    public int OrderTotal()
+    {
+      if (BreadOrder % 3 == 0)
+      {
+        int totalAmount = (BreadOrder - (BreadOrder / 3)) * 5;
+        return totalAmount;
+      }
+    }
   }
 }
 
