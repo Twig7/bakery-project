@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using BakeryFun
+using BakeryFun;
 
 namespace ProgramSpace
 {
@@ -16,9 +16,12 @@ namespace ProgramSpace
       int loaves = int.Parse(Console.ReadLine());
       Console.WriteLine($"Dang, {loaves} loaves, huh? ...you sure? Ok, ok, what about pastries? How many do you want?");
       int pastries = int.Parse(Console.ReadLine());
-      Console.WriteLine($"Ok, so that'll be {loaves} loaves and {pastries} pastries!")
-      Console.WriteLine($"Your total today is ${loafOrder.OrderTotal() +pastrieOrder.OrderTotal()} Don't say I didn't warn you!");
+      
+      Bread loafOrder = new Bread(loaves);
+      Pastry pastryOrder = new Pastry(pastries);
+      
+      Console.WriteLine($"Ok, so that'll be {loaves} loaves and {pastries} pastries!");
+      Console.WriteLine($"Your total today is ${loafOrder.OrderTotal() +pastryOrder.OrderTotal()} Don't say I didn't warn you!");
     }
-  }
   }
 }
