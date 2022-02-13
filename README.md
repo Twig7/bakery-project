@@ -22,8 +22,8 @@ This console based bakery will take your order of bread and or pastries and retu
 - CD Project.Tests run "dotnet restore"
 - run "dotnet build"
 - Run "dotnet test"
-- CD in to Project.Solution/ProjectName and run "dotnet restore"
-- run "dotnet run"
+- CD into BakeryName and run "dotnet build"
+- run "dotnet run" to start program!
 
 ## Known Bugs
 
