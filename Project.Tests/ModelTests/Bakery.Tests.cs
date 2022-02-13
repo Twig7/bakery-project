@@ -30,6 +30,24 @@ namespace Bakery.Tests
       int result = newBread.CalculateTotal();
       Assert.AreEqual(cost, result);
     }
+    [TestMethod]
+    public void CalculateTotal_ReturnCostOfThreePastries_Int()
+    {
+      int NumberOfPastries = 3;
+      int cost = 5;
+      Pastry newPastry = new Pastry(NumberOfPastries);
+      int result = newPastry.CalculateTotal();
+      Assert.AreEqual(cost, result);
+    }
+    [TestMethod]
+    public void CalculateTotal_ReturnCostOfTwoPastries_Int()
+    {
+      int NumberOfPastries = 2;
+      int cost = 4;
+      Pastry newPastry = new Pastry(NumberOfPastries);
+      int result = newPastry.CalculateTotal();
+      Assert.AreEqual(cost, result);
+    }
   }
 }
 
