@@ -21,6 +21,15 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry(3);
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
+    [TestMethod]
+    public void CalculateTotal_ReturnCostOfFourBread_Int()
+    {
+      int loafAmount = 4;
+      int cost = 15;
+      Bread newBread = new Bread(loafAmount);
+      int result = newBread.CalculateTotal();
+      Assert.AreEqual(cost, result);
+    }
   }
 }
 
