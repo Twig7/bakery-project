@@ -9,21 +9,21 @@ namespace BakeryFun
     public int LoafAmount { get; set;}
     public int LoafCost {get; set;}
 
-    public Bread(int numberOfLoaves)
+    public Bread(int loafAmount)
     {
-      NumberOfLoaves = numberOfLoaves)
+      LoafAmount = loafAmount;
       LoafCost = this.CalculateTotal();
     }
     public int CalculateTotal()
     {
-      if (NumberOfLoaves >= 3)
+      if (LoafAmount >= 3)
       {
-        int discountLoaves = (NumberOfLoaves - (NumberOfLoaves / 3));
+        int discountLoaves = (LoafAmount - (LoafAmount / 3));
         return discountLoaves *5;
       }
       else
       {
-        return NumberOfLoaves *5;
+        return LoafAmount *5;
       }
     }
   }
