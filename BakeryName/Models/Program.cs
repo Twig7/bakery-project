@@ -21,7 +21,7 @@ namespace Bakery.Logic
       Pastry pastryOrder = new Pastry(pastries);
       
       Console.WriteLine($"Ok, so that'll be {loaves} loaves and {pastries} pastries!");
-      Console.WriteLine($"Your total today is ${loafOrder.OrderTotal() +pastryOrder.OrderTotal()} Don't say I didn't warn you!");
+      Console.WriteLine($"Your total today is {loafOrder.LoafAmount} chunks of bread and {pastryOrder.NumberOfPastries} Don't say I didn't warn you! Now give me $" + (pastryOrder.PastryCost + loafOrder.LoafCost));
     }
   }
 }
